@@ -1,0 +1,106 @@
+/* Variables */
+:root {
+  --main-bg: hsl(185, 75%, 39%);
+  --text-font: hsl(229, 23%, 23%);
+  --faint-txt-clr: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg);
+  overflow: hidden;
+  font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
+}
+
+body::before {
+  content: url("images/bg-pattern-bottom.svg");
+  position: absolute;
+  bottom: -550px;
+  right: -96px;
+  width: 50%;
+}
+
+body::after {
+  content: url("images/bg-pattern-top.svg");
+  position: absolute;
+  top: -60%;
+  left: -471px;
+  width: 50%;
+}
+
+ul {
+  list-style: none;
+}
+/* Main */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+}
+
+.card main {
+  margin-bottom: 1.5rem;
+}
+.card main img {
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: -3.5rem;
+}
+
+.card main h2 {
+  margin: 2rem 0 0.5rem;
+  font-size: 18px;
+  color: var(--text-font);
+}
+
+.card main h2 span {
+  color: var(--faint-txt-clr);
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.card main p {
+  color: var(--faint-txt-clr);
+}
+
+.card footer {
+  padding: 1.5rem;
+}
+
+.card footer ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card footer ul li {
+  color: var(--faint-txt-clr);
+}
+
+.card footer ul li span {
+  font-weight: bold;
+  display: block;
+  font-size: 18px;
+  color: black;
+}
+
+@media (max-width: 767px) {
+  body::before,
+  body::after {
+    display: none;
+  }
+}
